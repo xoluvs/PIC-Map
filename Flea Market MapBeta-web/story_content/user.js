@@ -25,9 +25,9 @@ window.vendorDirectory = {
     boothNumber: 1,
     businessName: "Backwoods Design Wrx",
     ownerName: "Korrina Murray",
-    bio: "TBD",
-    phone: "TBD",
-    email: "TBD",
+    bio: "",
+    phone: "253-227-9046",
+    email: "cjwe0702@yahoo.com",
     website: "http://Backwoodsdesignwrx.com",
     socialLink1: "https://www.facebook.com/backwoodsvinylandcrafts",
     socialLink2: "",
@@ -39,7 +39,7 @@ window.vendorDirectory = {
     boothNumber: 2, //
     businessName: "Tony's Ynot Italian Ice",
     ownerName: "Tony Christen",
-    bio: "TBD",
+    bio: "",
     phone: "(360) 880-2748",
     email: "ynot_tony_785@msn.com",
     website: "",
@@ -51,13 +51,13 @@ window.vendorDirectory = {
   3: {
     stateVar: "stateBooth3", //
     boothNumber: 3, //
-    businessName: "Packwood Senior Center",
+    businessName: "Timber River Connections Older Adult Centers",
     ownerName: "",
-    bio: "TBD",
-    phone: "",
-    email: "",
-    website: "",
-    socialLink1: "",
+    bio: "Looking for cheap eats at the Packwood Flea Market? Load up on Loaded Baked Potatoes, Loaded Nachos or Hot Dogs at the Packwood Sr Center Flea Market Booth, 11a-6p, Fri-Sun Labor Day Weekend, 9/4-9/6. We will also be selling handmade baked goods, pie a la mode, shopping bags and much more. Vendors inside as well. Eat in our air conditioned dining room. Our booth entrance will be on the South side of the building this year, next to Tony's YNot Italian Ice. All proceeds from our booth support the Packwood Sr Center, helping us bring nutritious meals to seniors M-Th, 9a-3p. ",
+    phone: "360-494-6331",
+    email: "victoria@timberriverconnections.org",
+    website: "https://timberriverconnections.org/",
+    socialLink1: "https://www.facebook.com/lewiscountyseniors.org",
     socialLink2: "",
     socialLink3: "",
     categories: ["food", "other",]
@@ -249,7 +249,7 @@ window.vendorDirectory = {
     boothNumber: 17, //
     businessName: "",
     ownerName: "", //Doyle
-    bio: "",
+    bio: "Dan, Denise and Loretta will be bringing loads of vintage, antiques, collectibles, clothing and whatever else we can scour up to find new homes. We're long-time vendors roughly 20 years in this location. The Packwood fleamarket is the highlight of the year and we look forward to seeing everyone!",
     phone: "",
     email: "",
     website: "",
@@ -363,12 +363,12 @@ window.vendorDirectory = {
     ownerName: "David & Carol Schlottmann", //schlottsmann
     bio: "We have been setting up for the Memorial Day and the Labor Day flea markets for over 20 years, enjoying talking to customers and providing reasonably priced pop and water.  It’s always a fun weekend.",
     phone: "(360)352-8622",
-    email: "ookkees@domcast.net",
+    email: "ookkees@comcast.net",
     website: "",
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other", "books", "antiques"]
+    categories: ["other", "books", "antiques", "household"]
   },
   26: {
     stateVar: "stateBooth26", //
@@ -379,9 +379,9 @@ window.vendorDirectory = {
     phone: "",
     email: "josh@sparkedmetalworks.com",
     website: "https://www.sparkedmetalworks.com ",
-    socialLink1: "Instagram.com/sparkedmetalworks",
-    socialLink2: "Facebook.com/sparkedmetalworks",
-    socialLink3: "YouTube.com/@sparkedmetalworks",
+    socialLink1: "www.instagram.com/sparkedmetalworks",
+    socialLink2: "www.facebook.com/sparkedmetalworks",
+    socialLink3: "www.youTube.com/@sparkedmetalworks",
     categories: ["other", "metal", "household", "outdoors"]
   },
   27: {
@@ -480,7 +480,7 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["other", "antiques", "clothing"]
   },
   34: {
     stateVar: "stateBooth34", //
@@ -536,7 +536,7 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["other", "tools"]
   },
   38: {
     stateVar: "stateBooth38", //
@@ -570,15 +570,15 @@ window.vendorDirectory = {
     stateVar: "stateBooth40", //
     boothNumber: 40, //
     businessName: "",
-    ownerName: "", //livingston
-    bio: "",
-    phone: "",
-    email: "",
+    ownerName: "Robert Livington", //livingston
+    bio: "Large quantity of coins and Jewelry silver and gold.",
+    phone: "(360)742-4160",
+    email: "robertlivingstoncinema@gmail.com",
     website: "",
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["other", "antiques", "jewelry"]
   },
   41: {
     stateVar: "stateBooth41", //
@@ -753,7 +753,7 @@ window.vendorDirectory = {
     boothNumber: 53, //
     businessName: "",
     ownerName: "", //lebold
-    bio: "",
+    bio: "We are avid collectors of all kinds of things. At this sale we will have loads of costume jewelry, collectibles, glass, household items and more. We have some brand new Charles Viancin Silicon kitchen products such as lids, ice cube trays and sip sets. We need to clear out our house and storage so we are motivated sellers. We will be pricing things to sell and we will accept reasonable offers for bundle deals. ",
     phone: "",
     email: "",
     website: "",
@@ -779,13 +779,13 @@ window.vendorDirectory = {
 55: {
     stateVar: "stateBooth55", //
     boothNumber: 55, //
-    businessName: "",
-    ownerName: "", //palpalatok
-    bio: "",
+    businessName: "The Hippie Chick",
+    ownerName: "Carla Palpalatok", //palpalatok
+    bio: "Curating and rehoming preloved garments and forgotten treasures. I believe every piece has a past life and a future story. Explore my collection of handpicked vintage, retro style, and unique boho finds waiting for their next adventure.",
     phone: "",
-    email: "",
+    email: "palpal69pc@yahoo.com",
     website: "",
-    socialLink1: "",
+    socialLink1: "https://www.instagram.com/thehippiechick_spokane?igsi=MTBmNHl2Mjd4OGQwcw%3D%3D&utm_source=qr",
     socialLink2: "",
     socialLink3: "",
     categories: ["clothing"]
@@ -891,21 +891,21 @@ window.vendorDirectory = {
   63: {
     stateVar: "stateBooth63", //
     boothNumber: 63, //
-    businessName: "",
+    businessName: "Happy Piggy",
     ownerName: "", //Pyeatt
     bio: "",
-    phone: "",
+    phone: "(360) 832-6483",
     email: "",
     website: "",
-    socialLink1: "",
-    socialLink2: "",
+    socialLink1: "https://www.facebook.com/profile.php?id=61576682463369",
+    socialLink2: "https://www.instagram.com/happy_piggy_eatonville/?hl=en",
     socialLink3: "",
     categories: ["food"]
   },
   64: {
     stateVar: "stateBooth64", //
     boothNumber: 64, //
-    businessName: "",
+    businessName: "El Gallo Catering",
     ownerName: "", //Y Martinez
     bio: "",
     phone: "",
@@ -919,13 +919,13 @@ window.vendorDirectory = {
   65: {
     stateVar: "stateBooth65", //
     boothNumber: 65, //
-    businessName: "",
-    ownerName: "", //Valley and Vine
-    bio: "",
-    phone: "",
-    email: "",
+    businessName: "Valley and Vine Co.",
+    ownerName: "Casey Huard & Meagan Pena", //Valley and Vine
+    bio: "We are an event rental and experience business. It’s our mission to make your next event absolutely memorable. We offer a variety of rentals and services to make your social gathering unique and unforgettable. At this event we will be offering our bloom bar, as well as a patch bar for customizing tote bags and other items. These are a glimpse of what we can offer for events/parties. ",
+    phone: "509-494-9924",
+    email: "events@valleyandvineco.com",
     website: "",
-    socialLink1: "",
+    socialLink1: "https://www.instagram.com/yakimavalleyandvineco/",
     socialLink2: "",
     socialLink3: "",
     categories: ["other"]
@@ -934,7 +934,7 @@ window.vendorDirectory = {
     stateVar: "stateBooth66", //
     boothNumber: 66, //
     businessName: "",
-    ownerName: "", //
+    ownerName: "", //Friedman
     bio: "",
     phone: "",
     email: "",
@@ -942,13 +942,13 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["clothing"]
   },
   67: {
     stateVar: "stateBooth67", //
     boothNumber: 67, //
     businessName: "",
-    ownerName: "", //
+    ownerName: "", //McIntosh
     bio: "",
     phone: "",
     email: "",
@@ -956,13 +956,13 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["Jewelry"]
   },
   68: {
     stateVar: "stateBooth68", //
     boothNumber: 68, //
     businessName: "",
-    ownerName: "", //
+    ownerName: "", //Amgulo
     bio: "",
     phone: "",
     email: "",
@@ -970,13 +970,13 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["other", "toys"]
   },
   69: {
     stateVar: "stateBooth69", //
     boothNumber: 69, //
     businessName: "",
-    ownerName: "", //
+    ownerName: "", //lacaste
     bio: "",
     phone: "",
     email: "",
@@ -984,7 +984,7 @@ window.vendorDirectory = {
     socialLink1: "",
     socialLink2: "",
     socialLink3: "",
-    categories: ["other"]
+    categories: ["other", "antiques"]
   },
   70: {
     stateVar: "stateBooth70", //
@@ -1060,8 +1060,6 @@ window.vendorDirectory = {
  
   // Add remaining booths as they register: 5: { ... }, 6: { ... }, up to 120
 };
-
-
 
 }
 
@@ -1373,45 +1371,57 @@ window.Script20 = function()
   const player = GetPlayer();
 const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
 
-// 1. Retrieve the input name and normalize
-const searchQuery = (player.GetVar("businessOrOwnerName") || "").toLowerCase().trim();
+// 1. Reset all 21 category variables so previous category filters do not persist
+const categoryList = [
+  "antiques", "automotive", "books", "clothing", "food", 
+  "games", "glass", "health", "household", "jewelry", 
+  "medical", "metal", "other", "outdoors", "political", 
+  "religion", "restrooms", "staff", "tools", "toys", "wood"
+];
+categoryList.forEach(cat => player.SetVar(cat, false));
+
+// 2. Read name search input
+const rawQuery = player.GetVar("businessOrOwnerName") || player.GetVar("searchQuery") || "";
+const searchQuery = rawQuery.toLowerCase().trim();
 const isFiltering = searchQuery.length > 0;
 
-// 2. Loop through all booths (1 to 120)
+// 3. Update booth states (1 to 120)
 for (let i = 1; i <= 120; i++) {
   const vendor = directory[i];
   const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
 
-  // If search box was empty, reset everything to Normal
   if (!isFiltering) {
     player.SetVar(stateVar, "Normal");
     continue;
   }
 
-  // If booth is unassigned in the directory, set to Not Searched
   if (!vendor) {
     player.SetVar(stateVar, "Not Searched");
     continue;
   }
 
-  // Check matching against Business Name OR Owner Name
   const business = (vendor.businessName || "").toLowerCase();
   const owner = (vendor.ownerName || "").toLowerCase();
+  const bio = (vendor.bio || "").toLowerCase();
 
-  const isMatch = (business.length > 0 && business.includes(searchQuery)) ||
-                  (owner.length > 0 && owner.includes(searchQuery));
+  const isMatch = (business && business.includes(searchQuery)) ||
+                  (owner && owner.includes(searchQuery)) ||
+                  (bio && bio.includes(searchQuery));
 
-  // Set booth state variable
-  const targetState = isMatch ? "Searched" : "Not Searched";
-  player.SetVar(stateVar, targetState);
+  player.SetVar(stateVar, isMatch ? "Searched" : "Not Searched");
 }
 }
 
 window.Script21 = function()
 {
   const player = GetPlayer();
-const directory = window.vendorDirectory || {};
+const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
 
+// 1. Reset text search inputs so previous name searches do not persist
+player.SetVar("businessOrOwnerName", "");
+player.SetVar("searchQuery", "");
+
+// 2. Evaluate active category checkboxes
 const categoryList = [
   "antiques", "automotive", "books", "clothing", "food", 
   "games", "glass", "health", "household", "jewelry", 
@@ -1419,12 +1429,10 @@ const categoryList = [
   "religion", "restrooms", "staff", "tools", "toys", "wood"
 ];
 
-// 1. Retrieve query and checked categories
-const searchQuery = (player.GetVar("searchQuery") || "").toLowerCase().trim();
 const activeCategories = categoryList.filter(cat => player.GetVar(cat) === true);
-const isFiltering = searchQuery.length > 0 || activeCategories.length > 0;
+const isFiltering = activeCategories.length > 0;
 
-// 2. Iterate through booths 1 to 120
+// 3. Update booth states (1 to 120)
 for (let i = 1; i <= 120; i++) {
   const vendor = directory[i];
   const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
@@ -1439,19 +1447,10 @@ for (let i = 1; i <= 120; i++) {
     continue;
   }
 
-  // Text search match across Name, Owner, and Bio
-  const matchesText = !searchQuery || 
-    (vendor.businessName && vendor.businessName.toLowerCase().includes(searchQuery)) ||
-    (vendor.ownerName && vendor.ownerName.toLowerCase().includes(searchQuery)) ||
-    (vendor.bio && vendor.bio.toLowerCase().includes(searchQuery));
-
-  // Category match
   const vendorCategories = (vendor.categories || []).map(c => c.toLowerCase());
-  const matchesCategory = activeCategories.length === 0 || 
-    activeCategories.some(cat => vendorCategories.includes(cat));
+  const matchesCategory = activeCategories.some(cat => vendorCategories.includes(cat));
 
-  const targetState = (matchesText && matchesCategory) ? "Searched" : "Not Searched";
-  player.SetVar(stateVar, targetState);
+  player.SetVar(stateVar, matchesCategory ? "Searched" : "Not Searched");
 }
 }
 
