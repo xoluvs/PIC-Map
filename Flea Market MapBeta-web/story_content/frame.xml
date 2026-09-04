@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="Flea Market MapFinalV1" />
+              <option name="title_text" value="Flea Market Map Final" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1586,17 +1586,17 @@
   <nav_data>
     <outline>
       <links>
+        <slidelink slideid="_player.6SRuQeIViff" displaytext="PIC Map" expand="true" type="slide" translationId="5bnInaHLgrA">
+          <links>
+            <slidelink slideid="_player.6SRuQeIViff.6AtwcKvVtzl" displaytext="Town Map Home" expand="false" type="slide" translationId="5WPydsiRp3B" />
+          </links>
+        </slidelink>
         <slidelink slideid="_player.6HJ7DrW76KO" displaytext="Opening and Staff Sites" expand="true" type="slide" translationId="5iIc5F8sStK">
           <links>
             <slidelink slideid="_player.6HJ7DrW76KO.6gigZUvpT7I" displaytext="Into and Select Property" expand="false" type="slide" translationId="5XWaz9BdfYh" />
             <slidelink slideid="_player.6HJ7DrW76KO.5ZrultssttB" displaytext="100- Trackside" expand="false" type="slide" translationId="5dw62TnxihY" />
             <slidelink slideid="_player.6HJ7DrW76KO.64Bt4Zb2ibG" displaytext="101 Staff-Medical" expand="false" type="slide" translationId="6VmY7qbZayO" />
             <slidelink slideid="_player.6HJ7DrW76KO.6nYj6kNubjt" displaytext="No Vendor Info" expand="false" type="slide" translationId="6NWUoaVdoly" />
-          </links>
-        </slidelink>
-        <slidelink slideid="_player.6SRuQeIViff" displaytext="PIC Map" expand="true" type="slide" translationId="5bnInaHLgrA">
-          <links>
-            <slidelink slideid="_player.6SRuQeIViff.6AtwcKvVtzl" displaytext="Town Map Home" expand="false" type="slide" translationId="5WPydsiRp3B" />
           </links>
         </slidelink>
         <slidelink slideid="_player.6qHU5f5Ui81" displaytext="Vendors" expand="true" type="slide" translationId="5VovZZWeedk">

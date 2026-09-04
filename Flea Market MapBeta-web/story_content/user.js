@@ -18,6 +18,94 @@ var keydown = player.keydown;
 var keyup = player.keyup;
 window.Script1 = function()
 {
+  const player = GetPlayer();
+const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
+
+// 1. Reset all 21 category variables so previous category filters do not persist
+const categoryList = [
+  "antiques", "automotive", "books", "clothing", "food", 
+  "games", "glass", "health", "household", "jewelry", 
+  "medical", "metal", "other", "outdoors", "political", 
+  "religion", "restrooms", "staff", "tools", "toys", "wood"
+];
+categoryList.forEach(cat => player.SetVar(cat, false));
+
+// 2. Read name search input
+const rawQuery = player.GetVar("businessOrOwnerName") || player.GetVar("searchQuery") || "";
+const searchQuery = rawQuery.toLowerCase().trim();
+const isFiltering = searchQuery.length > 0;
+
+// 3. Update booth states (1 to 120)
+for (let i = 1; i <= 120; i++) {
+  const vendor = directory[i];
+  const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
+
+  if (!isFiltering) {
+    player.SetVar(stateVar, "Normal");
+    continue;
+  }
+
+  if (!vendor) {
+    player.SetVar(stateVar, "Not Searched");
+    continue;
+  }
+
+  const business = (vendor.businessName || "").toLowerCase();
+  const owner = (vendor.ownerName || "").toLowerCase();
+  const bio = (vendor.bio || "").toLowerCase();
+
+  const isMatch = (business && business.includes(searchQuery)) ||
+                  (owner && owner.includes(searchQuery)) ||
+                  (bio && bio.includes(searchQuery));
+
+  player.SetVar(stateVar, isMatch ? "Searched" : "Not Searched");
+}
+}
+
+window.Script2 = function()
+{
+  const player = GetPlayer();
+const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
+
+// 1. Reset text search inputs so previous name searches do not persist
+player.SetVar("businessOrOwnerName", "");
+player.SetVar("searchQuery", "");
+
+// 2. Evaluate active category checkboxes
+const categoryList = [
+  "antiques", "automotive", "books", "clothing", "food", 
+  "games", "glass", "health", "household", "jewelry", 
+  "medical", "metal", "other", "outdoors", "political", 
+  "religion", "restrooms", "staff", "tools", "toys", "wood"
+];
+
+const activeCategories = categoryList.filter(cat => player.GetVar(cat) === true);
+const isFiltering = activeCategories.length > 0;
+
+// 3. Update booth states (1 to 120)
+for (let i = 1; i <= 120; i++) {
+  const vendor = directory[i];
+  const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
+
+  if (!isFiltering) {
+    player.SetVar(stateVar, "Normal");
+    continue;
+  }
+
+  if (!vendor) {
+    player.SetVar(stateVar, "Not Searched");
+    continue;
+  }
+
+  const vendorCategories = (vendor.categories || []).map(c => c.toLowerCase());
+  const matchesCategory = activeCategories.some(cat => vendorCategories.includes(cat));
+
+  player.SetVar(stateVar, matchesCategory ? "Searched" : "Not Searched");
+}
+}
+
+window.Script3 = function()
+{
   // Initialize the global directory on the window object once
 window.vendorDirectory = {
   1: {
@@ -1063,7 +1151,7 @@ window.vendorDirectory = {
 
 }
 
-window.Script2 = function()
+window.Script4 = function()
 {
   const player = GetPlayer();
 const activeBoothNum = player.GetVar("activeBoothNumber");
@@ -1099,7 +1187,7 @@ player.SetVar("activeSocialLink3", vendor.socialLink3 || "");
 player.SetVar("activeCategories", (vendor.categories || []).join(", "));
 }
 
-window.Script3 = function()
+window.Script5 = function()
 {
   const player = GetPlayer();
 
@@ -1123,31 +1211,10 @@ linkVariables.forEach(varName => {
 });
 }
 
-window.Script4 = function()
-{
-  const player = GetPlayer();
-const url = player.GetVar("activeWebsite");
-
-if (url && url.trim() !== "") {
-  window.open(url, "_blank");
-}
-}
-
-window.Script5 = function()
-{
-  const player = GetPlayer();
-const url = player.GetVar("activeSocialLink1");
-
-
-if (url && url.trim() !== "") {
-  window.open(url, "_blank");
-}
-}
-
 window.Script6 = function()
 {
   const player = GetPlayer();
-const url = player.GetVar("activeSocialLink2");
+const url = player.GetVar("activeWebsite");
 
 if (url && url.trim() !== "") {
   window.open(url, "_blank");
@@ -1157,7 +1224,8 @@ if (url && url.trim() !== "") {
 window.Script7 = function()
 {
   const player = GetPlayer();
-const url = player.GetVar("activeSocialLink3");
+const url = player.GetVar("activeSocialLink1");
+
 
 if (url && url.trim() !== "") {
   window.open(url, "_blank");
@@ -1167,6 +1235,26 @@ if (url && url.trim() !== "") {
 window.Script8 = function()
 {
   const player = GetPlayer();
+const url = player.GetVar("activeSocialLink2");
+
+if (url && url.trim() !== "") {
+  window.open(url, "_blank");
+}
+}
+
+window.Script9 = function()
+{
+  const player = GetPlayer();
+const url = player.GetVar("activeSocialLink3");
+
+if (url && url.trim() !== "") {
+  window.open(url, "_blank");
+}
+}
+
+window.Script10 = function()
+{
+  const player = GetPlayer();
 const activeBoothNum = player.GetVar("activeBoothNumber");
 const directory = window.vendorDirectory || {};
 
@@ -1200,7 +1288,7 @@ player.SetVar("activeSocialLink3", vendor.socialLink3 || "");
 player.SetVar("activeCategories", (vendor.categories || []).join(", "));
 }
 
-window.Script9 = function()
+window.Script11 = function()
 {
   const player = GetPlayer();
 
@@ -1224,31 +1312,10 @@ linkVariables.forEach(varName => {
 });
 }
 
-window.Script10 = function()
-{
-  const player = GetPlayer();
-const url = player.GetVar("activeWebsite");
-
-if (url && url.trim() !== "") {
-  window.open(url, "_blank");
-}
-}
-
-window.Script11 = function()
-{
-  const player = GetPlayer();
-const url = player.GetVar("activeSocialLink1");
-
-
-if (url && url.trim() !== "") {
-  window.open(url, "_blank");
-}
-}
-
 window.Script12 = function()
 {
   const player = GetPlayer();
-const url = player.GetVar("activeSocialLink2");
+const url = player.GetVar("activeWebsite");
 
 if (url && url.trim() !== "") {
   window.open(url, "_blank");
@@ -1258,7 +1325,8 @@ if (url && url.trim() !== "") {
 window.Script13 = function()
 {
   const player = GetPlayer();
-const url = player.GetVar("activeSocialLink3");
+const url = player.GetVar("activeSocialLink1");
+
 
 if (url && url.trim() !== "") {
   window.open(url, "_blank");
@@ -1266,6 +1334,26 @@ if (url && url.trim() !== "") {
 }
 
 window.Script14 = function()
+{
+  const player = GetPlayer();
+const url = player.GetVar("activeSocialLink2");
+
+if (url && url.trim() !== "") {
+  window.open(url, "_blank");
+}
+}
+
+window.Script15 = function()
+{
+  const player = GetPlayer();
+const url = player.GetVar("activeSocialLink3");
+
+if (url && url.trim() !== "") {
+  window.open(url, "_blank");
+}
+}
+
+window.Script16 = function()
 {
   const player = GetPlayer();
 const activeBoothNum = player.GetVar("activeBoothNumber");
@@ -1301,7 +1389,7 @@ player.SetVar("activeSocialLink3", vendor.socialLink3 || "");
 player.SetVar("activeCategories", (vendor.categories || []).join(", "));
 }
 
-window.Script15 = function()
+window.Script17 = function()
 {
   const player = GetPlayer();
 
@@ -1325,7 +1413,7 @@ linkVariables.forEach(varName => {
 });
 }
 
-window.Script16 = function()
+window.Script18 = function()
 {
   const player = GetPlayer();
 const url = player.GetVar("activeWebsite");
@@ -1335,7 +1423,7 @@ if (url && url.trim() !== "") {
 }
 }
 
-window.Script17 = function()
+window.Script19 = function()
 {
   const player = GetPlayer();
 const url = player.GetVar("activeSocialLink1");
@@ -1346,7 +1434,7 @@ if (url && url.trim() !== "") {
 }
 }
 
-window.Script18 = function()
+window.Script20 = function()
 {
   const player = GetPlayer();
 const url = player.GetVar("activeSocialLink2");
@@ -1356,101 +1444,13 @@ if (url && url.trim() !== "") {
 }
 }
 
-window.Script19 = function()
+window.Script21 = function()
 {
   const player = GetPlayer();
 const url = player.GetVar("activeSocialLink3");
 
 if (url && url.trim() !== "") {
   window.open(url, "_blank");
-}
-}
-
-window.Script20 = function()
-{
-  const player = GetPlayer();
-const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
-
-// 1. Reset all 21 category variables so previous category filters do not persist
-const categoryList = [
-  "antiques", "automotive", "books", "clothing", "food", 
-  "games", "glass", "health", "household", "jewelry", 
-  "medical", "metal", "other", "outdoors", "political", 
-  "religion", "restrooms", "staff", "tools", "toys", "wood"
-];
-categoryList.forEach(cat => player.SetVar(cat, false));
-
-// 2. Read name search input
-const rawQuery = player.GetVar("businessOrOwnerName") || player.GetVar("searchQuery") || "";
-const searchQuery = rawQuery.toLowerCase().trim();
-const isFiltering = searchQuery.length > 0;
-
-// 3. Update booth states (1 to 120)
-for (let i = 1; i <= 120; i++) {
-  const vendor = directory[i];
-  const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
-
-  if (!isFiltering) {
-    player.SetVar(stateVar, "Normal");
-    continue;
-  }
-
-  if (!vendor) {
-    player.SetVar(stateVar, "Not Searched");
-    continue;
-  }
-
-  const business = (vendor.businessName || "").toLowerCase();
-  const owner = (vendor.ownerName || "").toLowerCase();
-  const bio = (vendor.bio || "").toLowerCase();
-
-  const isMatch = (business && business.includes(searchQuery)) ||
-                  (owner && owner.includes(searchQuery)) ||
-                  (bio && bio.includes(searchQuery));
-
-  player.SetVar(stateVar, isMatch ? "Searched" : "Not Searched");
-}
-}
-
-window.Script21 = function()
-{
-  const player = GetPlayer();
-const directory = window.vendorDirectory || (window.parent && window.parent.vendorDirectory) || {};
-
-// 1. Reset text search inputs so previous name searches do not persist
-player.SetVar("businessOrOwnerName", "");
-player.SetVar("searchQuery", "");
-
-// 2. Evaluate active category checkboxes
-const categoryList = [
-  "antiques", "automotive", "books", "clothing", "food", 
-  "games", "glass", "health", "household", "jewelry", 
-  "medical", "metal", "other", "outdoors", "political", 
-  "religion", "restrooms", "staff", "tools", "toys", "wood"
-];
-
-const activeCategories = categoryList.filter(cat => player.GetVar(cat) === true);
-const isFiltering = activeCategories.length > 0;
-
-// 3. Update booth states (1 to 120)
-for (let i = 1; i <= 120; i++) {
-  const vendor = directory[i];
-  const stateVar = (vendor && vendor.stateVar) ? vendor.stateVar : `stateBooth${i}`;
-
-  if (!isFiltering) {
-    player.SetVar(stateVar, "Normal");
-    continue;
-  }
-
-  if (!vendor) {
-    player.SetVar(stateVar, "Not Searched");
-    continue;
-  }
-
-  const vendorCategories = (vendor.categories || []).map(c => c.toLowerCase());
-  const matchesCategory = activeCategories.some(cat => vendorCategories.includes(cat));
-
-  player.SetVar(stateVar, matchesCategory ? "Searched" : "Not Searched");
 }
 }
 
